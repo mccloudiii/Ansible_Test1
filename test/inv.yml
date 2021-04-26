@@ -1,0 +1,22 @@
+---
+all:
+  children:
+    routers:
+      children:
+        ios_routers:
+          hosts:
+            10.241.176.173:
+                name: MXBCNTIJ0290RTBHCSRMOB01
+            10.241.161.32:
+                name: MXGUACEL0162RTBHCSRMOB01
+        iosxr_routers:
+          hosts:
+            10.241.62.7:
+                name: MXCMXM02RTCORE02
+
+
+
+# INI format
+# [routers]
+# R1
+# R2
