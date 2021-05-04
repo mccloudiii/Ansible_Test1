@@ -5,7 +5,7 @@
   tasks:
     - name: TGet VRF config from routers
       ios_command:
-      commands: "show running-config | section vrf definition"
+        commands: "show running-config | section vrf definition"
       register: cli_result
 
     - name: Print VRF output
