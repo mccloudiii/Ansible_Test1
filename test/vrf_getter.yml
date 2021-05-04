@@ -3,6 +3,8 @@
   hosts: routers
   vars:
     ansible_connection: network_cli
+  collections:
+    - cisco.ios
   tasks:
     - name: Get VRF config from routers
       ios_command:
