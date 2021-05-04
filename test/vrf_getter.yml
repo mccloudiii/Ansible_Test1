@@ -23,4 +23,4 @@
     - name: Write output to file
       copy:
         content: "{{ cli_result.stdout[0] }}\n"
-        dest: "outputs/{{ inventory_hostname.name }}.txt"
+        dest: "outputs/{{ inventory_hostname }}.txt"
