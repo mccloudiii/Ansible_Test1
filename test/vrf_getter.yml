@@ -4,8 +4,8 @@
   connection: network_cli
   tasks:
     - name: TGet VRF config from routers
-      cisco.ios.ios_command:
-        commands: "show running-config | section vrf definition"
+    - cisco.ios.ios_command:
+      commands: "show running-config | section vrf definition"
       register: cli_result
 
     - name: Print VRF output
