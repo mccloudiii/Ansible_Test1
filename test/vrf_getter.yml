@@ -5,6 +5,7 @@
     ansible_connection: network_cli
   collections:
     - cisco.ios
+  gather_facts: no
   tasks:
     - ios_command:
         commands: "show running-config | section vrf definition"
@@ -16,7 +17,7 @@
 
     - name: Create outputs/ folder
       file:
-        path: "/opt/ansible/outputs"
+        path: "/home/outputs"
         state: directory
       run_once: true
 
