@@ -6,7 +6,6 @@
   collections:
     - cisco.ios
   tasks:
-    - name: Get VRF config from routers
       ios_command:
         commands: "show running-config | section vrf definition"
       register: cli_result
