@@ -16,7 +16,7 @@
 
     - name: Create outputs/ folder
       file:
-        path: "outputs"
+        path: "/opt/ansible/outputs"
         state: directory
       run_once: true
 
