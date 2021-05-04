@@ -1,10 +1,12 @@
 ---
 - name: "PLAY 1: Capture and store VRF config"
   hosts: routers
-  connection: network_cli
+  vars:
+    ansible_connection: network_cli
+  collections:
+    - cisco.ios
   tasks:
-    - name: TGet VRF config from routers
-      ios_command:
+    - ios_command:
         commands: "show running-config | section vrf definition"
       register: cli_result
 
