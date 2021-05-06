@@ -17,12 +17,11 @@
 
     - name: Create outputs/ folder
       file:
-        path: "/usr/outputs"
+        path: "/outputs"
         state: directory
-      become: true
       run_once: true
 
     - name: Write output to file
       copy:
         content: "{{ cli_result.stdout[0] }}\n"
-        dest: "/usr/outputs/{{ inventory_hostname }}.txt"
+        dest: "outputs/{{ inventory_hostname }}.txt"
