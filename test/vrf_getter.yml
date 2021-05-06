@@ -19,7 +19,7 @@
       file:
         path: "/usr/outputs"
         state: directory
-      become: yes
+      become: true
       run_once: true
 
     - name: Write output to file
